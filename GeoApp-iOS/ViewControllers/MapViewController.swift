@@ -11,6 +11,10 @@ import Mapbox
 
 class MapViewController: UIViewController {
 	
+	struct Constant {
+		static let cegepCenter = CLLocationCoordinate2D(latitude: 46.78642133499, longitude: -71.28739276585)
+	}
+	
 	// MARK: - IB outlets
 
 	@IBOutlet var mapView: MGLMapView!
@@ -19,21 +23,23 @@ class MapViewController: UIViewController {
 	
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
 		
-		//let mapView = MGLMapView(frame: self.view.bounds)
-		mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+		let context = MapController()
+		context.delegate = self
 		
-		let center = CLLocationCoordinate2D(latitude: 46.78642133499, longitude: -71.28739276585)
-		mapView.setCenter(center, zoomLevel: 16, animated: false)
-		
-		//self.view.addSubview(mapView)
+		self.setUpMap()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+	
+	// MARK: - Set up methods
+	
+	private func setUpMap() {
+		self.mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+		self.mapView.setCenter(Constant.cegepCenter, zoomLevel: 16, animated: false)
+	}
 
 }

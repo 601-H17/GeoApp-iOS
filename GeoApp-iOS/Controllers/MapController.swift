@@ -10,8 +10,10 @@ import Foundation
 
 class MapController {
 	
+	var delegate: MapViewController? = nil
+	
 	init() {
-		
+		RestAPI.shared.onBaseURL("https://csf-geo-app.herokuapp.com").path("/api/map").fetch()
 	}
 	
 }
