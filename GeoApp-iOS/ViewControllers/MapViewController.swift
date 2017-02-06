@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MapViewController.swift
 //  GeoApp-iOS
 //
 //  Created by Benoît Lévesque on 2017-02-06.
@@ -7,14 +7,14 @@
 //
 
 import UIKit
-
 import Mapbox
 
-class ViewController: UIViewController {
+class MapViewController: UIViewController {
 
-	override func viewDidLoad() {
-		super.viewDidLoad()
-		// Do any additional setup after loading the view, typically from a nib.
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        // Do any additional setup after loading the view.
 		
 		let mapView = MGLMapView(frame: self.view.bounds)
 		mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
@@ -23,13 +23,11 @@ class ViewController: UIViewController {
 		mapView.setCenter(center, zoomLevel: 16, animated: false)
 		
 		self.view.addSubview(mapView)
-	}
+    }
 
-	override func didReceiveMemoryWarning() {
-		super.didReceiveMemoryWarning()
-		// Dispose of any resources that can be recreated.
-	}
-
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
 
 }
-

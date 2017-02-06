@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		2F02F0DB48A55EAD7C471FC9 /* Pods_GeoApp_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89F4BF3530D1F5C6AAEB41E6 /* Pods_GeoApp_iOS.framework */; };
+		6A41C0171E4917A800A551B6 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A41C0161E4917A800A551B6 /* MapViewController.swift */; };
+		6A41C0191E49187500A551B6 /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A41C0181E49187500A551B6 /* MapController.swift */; };
 		6AD5D5071E48FE0B0095B585 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD5D5061E48FE0B0095B585 /* AppDelegate.swift */; };
-		6AD5D5091E48FE0B0095B585 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD5D5081E48FE0B0095B585 /* ViewController.swift */; };
 		6AD5D50C1E48FE0B0095B585 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AD5D50A1E48FE0B0095B585 /* Main.storyboard */; };
 		6AD5D50F1E48FE0B0095B585 /* GeoApp_iOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6AD5D50D1E48FE0B0095B585 /* GeoApp_iOS.xcdatamodeld */; };
 		6AD5D5111E48FE0B0095B585 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6AD5D5101E48FE0B0095B585 /* Assets.xcassets */; };
@@ -41,9 +42,10 @@
 		011CE84BE09C4EABAE1BB39A /* Pods-GeoApp-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeoApp-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GeoApp-iOS/Pods-GeoApp-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		2458FBC7EBD1B0948278E73D /* Pods_GeoApp_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeoApp_iOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CEE8DAB2BD43039DE4DCCBA /* Pods-GeoApp-iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeoApp-iOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GeoApp-iOSTests/Pods-GeoApp-iOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		6A41C0161E4917A800A551B6 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = ViewControllers/MapViewController.swift; sourceTree = "<group>"; };
+		6A41C0181E49187500A551B6 /* MapController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapController.swift; path = Controllers/MapController.swift; sourceTree = "<group>"; };
 		6AD5D5031E48FE0B0095B585 /* GeoApp-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GeoApp-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AD5D5061E48FE0B0095B585 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6AD5D5081E48FE0B0095B585 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6AD5D50B1E48FE0B0095B585 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6AD5D50E1E48FE0B0095B585 /* GeoApp_iOS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GeoApp_iOS.xcdatamodel; sourceTree = "<group>"; };
 		6AD5D5101E48FE0B0095B585 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -91,6 +93,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6A41C0111E49170700A551B6 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				6A41C0161E4917A800A551B6 /* MapViewController.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		6A41C0121E49171500A551B6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6AD5D50A1E48FE0B0095B585 /* Main.storyboard */,
+				6AD5D5121E48FE0B0095B585 /* LaunchScreen.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		6A41C0131E49171B00A551B6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6A41C0151E49174E00A551B6 /* Supporting files */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		6A41C0141E49172200A551B6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6A41C0181E49187500A551B6 /* MapController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		6A41C0151E49174E00A551B6 /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				6AD5D5101E48FE0B0095B585 /* Assets.xcassets */,
+				6AD5D5151E48FE0B0095B585 /* Info.plist */,
+				6AD5D50D1E48FE0B0095B585 /* GeoApp_iOS.xcdatamodeld */,
+			);
+			name = "Supporting files";
+			sourceTree = "<group>";
+		};
 		6AD5D4FA1E48FE0B0095B585 = {
 			isa = PBXGroup;
 			children = (
@@ -117,12 +162,10 @@
 			isa = PBXGroup;
 			children = (
 				6AD5D5061E48FE0B0095B585 /* AppDelegate.swift */,
-				6AD5D5081E48FE0B0095B585 /* ViewController.swift */,
-				6AD5D50A1E48FE0B0095B585 /* Main.storyboard */,
-				6AD5D5101E48FE0B0095B585 /* Assets.xcassets */,
-				6AD5D5121E48FE0B0095B585 /* LaunchScreen.storyboard */,
-				6AD5D5151E48FE0B0095B585 /* Info.plist */,
-				6AD5D50D1E48FE0B0095B585 /* GeoApp_iOS.xcdatamodeld */,
+				6A41C0141E49172200A551B6 /* Controllers */,
+				6A41C0111E49170700A551B6 /* ViewController */,
+				6A41C0131E49171B00A551B6 /* Model */,
+				6A41C0121E49171500A551B6 /* Views */,
 			);
 			path = "GeoApp-iOS";
 			sourceTree = "<group>";
@@ -452,8 +495,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6AD5D5091E48FE0B0095B585 /* ViewController.swift in Sources */,
+				6A41C0191E49187500A551B6 /* MapController.swift in Sources */,
 				6AD5D50F1E48FE0B0095B585 /* GeoApp_iOS.xcdatamodeld in Sources */,
+				6A41C0171E4917A800A551B6 /* MapViewController.swift in Sources */,
 				6AD5D5071E48FE0B0095B585 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -709,6 +753,7 @@
 				6AD5D5301E48FE0B0095B585 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6AD5D5311E48FE0B0095B585 /* Build configuration list for PBXNativeTarget "GeoApp-iOSTests" */ = {
 			isa = XCConfigurationList;
@@ -717,6 +762,7 @@
 				6AD5D5331E48FE0B0095B585 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6AD5D5341E48FE0B0095B585 /* Build configuration list for PBXNativeTarget "GeoApp-iOSUITests" */ = {
 			isa = XCConfigurationList;
@@ -725,6 +771,7 @@
 				6AD5D5361E48FE0B0095B585 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
