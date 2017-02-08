@@ -22,10 +22,10 @@ class MapController {
 		self.restAPI.onBaseURL("https://csf-geo-app.herokuapp.com").path("/api/map").fetch(onComplete: onComplete, onFailure: onFailure)
 	}
 	
-	func createMap(json: [String:Any]) {
+	func createMap(json: [String:Any]) -> Map {
 		let map = Map(mapJson: json)
 		map.create()
+		return map
 	}
-	
 	
 }

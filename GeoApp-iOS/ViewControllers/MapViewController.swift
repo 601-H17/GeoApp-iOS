@@ -44,7 +44,8 @@ class MapViewController: UIViewController {
 	// Map completions
 	
 	func onComplete(_ json: [String:Any]) {
-		self.mapController.createMap(json: json)
+		let map = self.mapController.createMap(json: json)
+		map.draw(on: self.mapView)
 	}
 	
 	func onFailure(_ message: String) {
