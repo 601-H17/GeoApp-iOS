@@ -11,6 +11,8 @@
 		6A41C0171E4917A800A551B6 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A41C0161E4917A800A551B6 /* MapViewController.swift */; };
 		6A41C0191E49187500A551B6 /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A41C0181E49187500A551B6 /* MapController.swift */; };
 		6A41C01C1E491CE900A551B6 /* RestAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A41C01B1E491CE900A551B6 /* RestAPI.swift */; };
+		6A41C01E1E49275100A551B6 /* Serializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A41C01D1E49275100A551B6 /* Serializer.swift */; };
+		6A6204CF1E4A464800E758D2 /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6204CE1E4A464800E758D2 /* Map.swift */; };
 		6AD5D5071E48FE0B0095B585 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD5D5061E48FE0B0095B585 /* AppDelegate.swift */; };
 		6AD5D50C1E48FE0B0095B585 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AD5D50A1E48FE0B0095B585 /* Main.storyboard */; };
 		6AD5D50F1E48FE0B0095B585 /* GeoApp_iOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6AD5D50D1E48FE0B0095B585 /* GeoApp_iOS.xcdatamodeld */; };
@@ -46,6 +48,8 @@
 		6A41C0161E4917A800A551B6 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = ViewControllers/MapViewController.swift; sourceTree = "<group>"; };
 		6A41C0181E49187500A551B6 /* MapController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapController.swift; path = Controllers/MapController.swift; sourceTree = "<group>"; };
 		6A41C01B1E491CE900A551B6 /* RestAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RestAPI.swift; path = Model/RestAPI/RestAPI.swift; sourceTree = "<group>"; };
+		6A41C01D1E49275100A551B6 /* Serializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Serializer.swift; path = Model/RestAPI/Serializer.swift; sourceTree = "<group>"; };
+		6A6204CE1E4A464800E758D2 /* Map.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Map.swift; path = Model/Map.swift; sourceTree = "<group>"; };
 		6AD5D5031E48FE0B0095B585 /* GeoApp-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GeoApp-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AD5D5061E48FE0B0095B585 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6AD5D50B1E48FE0B0095B585 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -115,6 +119,7 @@
 		6A41C0131E49171B00A551B6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6A6204CE1E4A464800E758D2 /* Map.swift */,
 				6A41C01A1E491CC000A551B6 /* RestAPI */,
 				6A41C0151E49174E00A551B6 /* Supporting files */,
 			);
@@ -143,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				6A41C01B1E491CE900A551B6 /* RestAPI.swift */,
+				6A41C01D1E49275100A551B6 /* Serializer.swift */,
 			);
 			name = RestAPI;
 			sourceTree = "<group>";
@@ -507,7 +513,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A41C0191E49187500A551B6 /* MapController.swift in Sources */,
+				6A41C01E1E49275100A551B6 /* Serializer.swift in Sources */,
 				6A41C01C1E491CE900A551B6 /* RestAPI.swift in Sources */,
+				6A6204CF1E4A464800E758D2 /* Map.swift in Sources */,
 				6AD5D50F1E48FE0B0095B585 /* GeoApp_iOS.xcdatamodeld in Sources */,
 				6A41C0171E4917A800A551B6 /* MapViewController.swift in Sources */,
 				6AD5D5071E48FE0B0095B585 /* AppDelegate.swift in Sources */,

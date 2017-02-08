@@ -19,21 +19,37 @@ class MapViewController: UIViewController {
 
 	@IBOutlet var mapView: MGLMapView!
 	
+	// MARK: - Outlets
+	
+	var mapController: MapController!
+	
 	// MARK: - View controller methods
 	
     override func viewDidLoad() {
         super.viewDidLoad()
 		
-		let context = MapController()
-		context.delegate = self
+		self.mapController = MapController(restAPI: RestAPI.shared)
+		self.mapController.delegate = self
 		
 		self.setUpMap()
+		
+		self.mapController.fetchMap(onComplete: onComplete(_:), onFailure: onFailure(_:))
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+	
+	// Map completions
+	
+	func onComplete(_ json: [String:Any]) {
+		self.mapController.createMap(json: json)
+	}
+	
+	func onFailure(_ message: String) {
+		print(message)
+	}
 	
 	// MARK: - Set up methods
 	

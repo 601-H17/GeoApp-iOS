@@ -34,29 +34,21 @@ class RestAPI {
 		return RestAPI.shared
 	}
 	
-	func fetch() {
+	func fetch(onComplete complete: @escaping ([String:Any]) -> Void, onFailure failure: @escaping (String) -> Void ) {
 		let url = URL(string: self.url)!
 		
 		let task = session.dataTask(with: url, completionHandler: {
 			(data, response, error) in
 			
 			if let error = error {
-				
 				print(error.localizedDescription)
-				
+				failure(error.localizedDescription)
 			} else {
-				
-				do {
-					
-					if let json = try JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? [String: Any] {
-						print((json["features"] as! [Any])[0])
-					}
-					
-				} catch let e {
-					print("error in JSONSerialization: \(e.localizedDescription)")
+				if let json = Serializer.serializeJson(with: data!) {
+					complete(json)
+				} else {
+					failure("There was an error in json (json is nil)")
 				}
-				
-				
 			}
 			
 		})
