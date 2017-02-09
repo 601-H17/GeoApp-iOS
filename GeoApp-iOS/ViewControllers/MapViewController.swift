@@ -9,7 +9,7 @@
 import UIKit
 import Mapbox
 
-class MapViewController: UIViewController {
+class MapViewController: UIViewController, MGLMapViewDelegate {
 	
 	struct Constant {
 		static let cegepCenter = CLLocationCoordinate2D(latitude: 46.78642133499, longitude: -71.28739276585)
@@ -28,12 +28,13 @@ class MapViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 		
-		self.mapController = MapController(restAPI: RestAPI.shared)
+		let restAPI = RestAPI(URLSessionConfiguration.default)
+		self.mapController = MapController(restAPI: restAPI)
 		self.mapController.delegate = self
 		
 		self.setUpMap()
 		
-		self.mapController.fetchMap(onComplete: onComplete(_:), onFailure: onFailure(_:))
+		self.mapController.fetchMap()
     }
 
     override func didReceiveMemoryWarning() {
@@ -41,15 +42,10 @@ class MapViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 	
-	// Map completions
+	// Map
 	
-	func onComplete(_ json: [String:Any]) {
-		let map = self.mapController.createMap(json: json)
-		map.draw(on: self.mapView)
-	}
-	
-	func onFailure(_ message: String) {
-		print(message)
+	func mapView(_ mapView: MGLMapView, lineWidthForPolylineAnnotation annotation: MGLPolyline) -> CGFloat {
+		return 2.0
 	}
 	
 	// MARK: - Set up methods

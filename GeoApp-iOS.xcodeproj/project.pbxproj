@@ -13,6 +13,8 @@
 		6A41C01C1E491CE900A551B6 /* RestAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A41C01B1E491CE900A551B6 /* RestAPI.swift */; };
 		6A41C01E1E49275100A551B6 /* Serializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A41C01D1E49275100A551B6 /* Serializer.swift */; };
 		6A6204CF1E4A464800E758D2 /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6204CE1E4A464800E758D2 /* Map.swift */; };
+		6AB3629D1E4CBB380004C376 /* Points.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB3629C1E4CBB380004C376 /* Points.swift */; };
+		6AB3629F1E4CC3BD0004C376 /* ApiKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6AB3629E1E4CC3BD0004C376 /* ApiKeys.plist */; };
 		6AD5D5071E48FE0B0095B585 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD5D5061E48FE0B0095B585 /* AppDelegate.swift */; };
 		6AD5D50C1E48FE0B0095B585 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AD5D50A1E48FE0B0095B585 /* Main.storyboard */; };
 		6AD5D50F1E48FE0B0095B585 /* GeoApp_iOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6AD5D50D1E48FE0B0095B585 /* GeoApp_iOS.xcdatamodeld */; };
@@ -50,6 +52,8 @@
 		6A41C01B1E491CE900A551B6 /* RestAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RestAPI.swift; path = Model/RestAPI/RestAPI.swift; sourceTree = "<group>"; };
 		6A41C01D1E49275100A551B6 /* Serializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Serializer.swift; path = Model/RestAPI/Serializer.swift; sourceTree = "<group>"; };
 		6A6204CE1E4A464800E758D2 /* Map.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Map.swift; path = Model/Map.swift; sourceTree = "<group>"; };
+		6AB3629C1E4CBB380004C376 /* Points.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Points.swift; path = Model/Points.swift; sourceTree = "<group>"; };
+		6AB3629E1E4CC3BD0004C376 /* ApiKeys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = ApiKeys.plist; path = "Model/Supporting files/ApiKeys.plist"; sourceTree = "<group>"; };
 		6AD5D5031E48FE0B0095B585 /* GeoApp-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GeoApp-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AD5D5061E48FE0B0095B585 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6AD5D50B1E48FE0B0095B585 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -120,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				6A6204CE1E4A464800E758D2 /* Map.swift */,
+				6AB3629C1E4CBB380004C376 /* Points.swift */,
 				6A41C01A1E491CC000A551B6 /* RestAPI */,
 				6A41C0151E49174E00A551B6 /* Supporting files */,
 			);
@@ -139,6 +144,7 @@
 			children = (
 				6AD5D5101E48FE0B0095B585 /* Assets.xcassets */,
 				6AD5D5151E48FE0B0095B585 /* Info.plist */,
+				6AB3629E1E4CC3BD0004C376 /* ApiKeys.plist */,
 				6AD5D50D1E48FE0B0095B585 /* GeoApp_iOS.xcdatamodeld */,
 			);
 			name = "Supporting files";
@@ -348,6 +354,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6AD5D5141E48FE0B0095B585 /* LaunchScreen.storyboard in Resources */,
+				6AB3629F1E4CC3BD0004C376 /* ApiKeys.plist in Resources */,
 				6AD5D5111E48FE0B0095B585 /* Assets.xcassets in Resources */,
 				6AD5D50C1E48FE0B0095B585 /* Main.storyboard in Resources */,
 			);
@@ -516,6 +523,7 @@
 				6A41C01E1E49275100A551B6 /* Serializer.swift in Sources */,
 				6A41C01C1E491CE900A551B6 /* RestAPI.swift in Sources */,
 				6A6204CF1E4A464800E758D2 /* Map.swift in Sources */,
+				6AB3629D1E4CBB380004C376 /* Points.swift in Sources */,
 				6AD5D50F1E48FE0B0095B585 /* GeoApp_iOS.xcdatamodeld in Sources */,
 				6A41C0171E4917A800A551B6 /* MapViewController.swift in Sources */,
 				6AD5D5071E48FE0B0095B585 /* AppDelegate.swift in Sources */,

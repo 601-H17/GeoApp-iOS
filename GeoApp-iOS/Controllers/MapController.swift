@@ -12,20 +12,23 @@ class MapController {
 	
 	var delegate: MapViewController? = nil
 	
-	var restAPI: RestAPI
+	private var restAPI: RestAPI
+	private var map: Map? = nil
 	
 	init(restAPI: RestAPI) {
 		self.restAPI = restAPI
 	}
 	
-	func fetchMap(onComplete: @escaping ([String:Any]) -> Void, onFailure: @escaping (String) -> Void) {
-		self.restAPI.onBaseURL("https://csf-geo-app.herokuapp.com").path("/api/map").fetch(onComplete: onComplete, onFailure: onFailure)
+	func fetchMap() {
+		self.restAPI.onBaseURL("https://csf-geo-app.herokuapp.com").path("/api/map").onComplete(self.createMap(json:)).fetch()
 	}
 	
-	func createMap(json: [String:Any]) -> Map {
-		let map = Map(mapJson: json)
-		map.create()
-		return map
+	func createMap(json: [String:Any]) {
+		self.map = Map(mapJson: json)
+		self.map!.create()
+		if let delegate = self.delegate {
+			self.map!.draw(on: delegate.mapView)
+		}
 	}
 	
 }

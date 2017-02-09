@@ -14,6 +14,7 @@ class Map {
 	private var mapJson: [String:Any]
 	private var mapLines: [MGLPolyline] = []
 	
+	
 	init(mapJson map: [String:Any]) {
 		self.mapJson = map
 	}
@@ -24,16 +25,25 @@ class Map {
 		for feature in features {
 			let f = feature as! [String:Any]
 			if let geometry = f["geometry"] as? [String:Any] {
-				if let type = geometry["type"] as? String, type == "LineString" {
-					guard let coordinates = geometry["coordinates"] as? [[Double]] else { continue }
-					var linesPts: [CLLocationCoordinate2D] = []
-					coordinates.forEach({ (coordinate) in
-						let coord = CLLocationCoordinate2D(latitude: coordinate[1], longitude: coordinate[0])
-						linesPts.append(coord)
-					})
+				if let type = geometry["type"] as? String {
+					switch type {
+					case "LineString":
+						guard let coordinates = geometry["coordinates"] as? [[Double]] else { continue }
+						var linesPts: [CLLocationCoordinate2D] = []
+						coordinates.forEach({ (coordinate) in
+							let coord = CLLocationCoordinate2D(latitude: coordinate[1], longitude: coordinate[0])
+							linesPts.append(coord)
+						})
+						
+						let line = MGLPolyline(coordinates: &linesPts, count: UInt(linesPts.count))
+						self.mapLines.append(line)
+						
+						//case "Point":
+						
+						
+					default: break
+					}
 					
-					let line = MGLPolyline(coordinates: &linesPts, count: UInt(linesPts.count))
-					self.mapLines.append(line)
 				}
 			}
 		}
